@@ -1,17 +1,15 @@
 
-<h1>Spiderman</h1>
-<dl>
-  <td>Nombre:</td>
-  <dd>{{name}}</dd>
+<h3>Listado de Héroes</h3>
 
-  <td>Edad:</td>
-  <dd>{{age}}</dd>
+<div *ngIf="deleteHero">
+  <h3>Héroe borrado <small class="text-danger">{{deleteHero}}</small></h3>
+</div>
 
-  <td>Metodo:</td>
-  <dd></dd>
 
-  <td>Capitalizado:</td>
-  <dd>{{capitalizedName}}</dd>
-</dl>
-<button class="btn btn-primary m-1">Cambiar edad</button>
-<button class="btn btn-primary m-1">Cambiar nombre</button>
+<h3>No ha borrado nada</h3>
+
+<button (click)="removeLast()" class="btn btn-danger">Borrar Heroe</button>
+
+<ul class="mt-2 list-group">
+  <li *ngFor="let hero of heroeNames" class="list-group-item">{{hero}}</li>
+</ul>

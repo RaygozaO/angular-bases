@@ -1,1 +1,19 @@
-<p>heroe works!</p>
+
+<h1>Spiderman</h1>
+<dl>
+  <td>Nombre:</td>
+  <dd>{{name}}</dd>
+
+  <td>Edad:</td>
+  <dd>{{age}}</dd>
+
+  <td>Metodo:</td>
+  <dd>{{getHeroeDescription()}}</dd>
+
+  <td>Capitalizado:</td>
+  <dd>{{capitalizedName}}</dd>
+</dl>
+<button *ngIf="age !== 35" (click)="changeAge()" class="btn btn-primary m-1">Cambiar edad</button>
+<button *ngIf="name !== 'Spiderman'" (click)="changeHero()" class="btn btn-primary m-1">Cambiar nombre</button>
+<button *ngIf="name !== 'Peter Parker' && age !== 45" (click)="changeRestablecer()" class="btn btn-danger mx-2">Restablecer</button>
+

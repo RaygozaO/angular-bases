@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './heroe-list.component.css'
 })
 export class HeroeListComponent {
-  public name:string = 'Peter Parker';
-  public age:number = 45;
+  public heroeNames: string[] = ['Spiderman','Ironman','Hulk','She Hulk','Thor'];
+  public deleteHero?:string;
 
-  get capitalizedName():string{
-    return this.name.toUpperCase();
+  removeLast():void{
+     this.deleteHero = this.heroeNames.pop();
   }
 }
